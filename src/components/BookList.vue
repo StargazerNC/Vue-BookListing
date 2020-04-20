@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>{{title}}</h1>
+        <book-form @addBook='appendBook'></book-form>
         <ul>
           <!-- <li>LOTR - Fellowship Of The Ring</li>
           <li>LOTR - The Two Towers</li>
@@ -11,7 +12,7 @@
 </template>
 <script>
     import BookItem from './BookItem';
-
+    import BookForm from './BookForm';
     export default {
       name: "BookList",
       data() {
@@ -25,7 +26,12 @@
           ]
         }
       },
-      components: { BookItem }
+      components: { BookItem },
+      mewthods:{
+        appendBook(bookTitle, bookAuthor){
+          this.books.push({ title: bookTitle, author: bookAuthor })
+        }
+      }
     }
 </script>
 <style>
