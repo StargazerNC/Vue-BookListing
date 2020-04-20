@@ -5,7 +5,7 @@
           <!-- <li>LOTR - Fellowship Of The Ring</li>
           <li>LOTR - The Two Towers</li>
           <li>LOTR - The Return Of The King</li> -->
-          <li v-for="bookm in books">{{book.title}}: {{book.author}}</li>
+          <li v-for="book in books">{{book.title}}: {{book.author}}</li>
         </ul>
     </div>
 </template>
@@ -36,7 +36,7 @@
     }
 
     li {
-      display:block;
-      margin 0 10px;
+      display: block;
+      margin: 0 10px;
     }
 </style>
