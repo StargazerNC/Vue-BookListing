@@ -5,11 +5,12 @@
           <!-- <li>LOTR - Fellowship Of The Ring</li>
           <li>LOTR - The Two Towers</li>
           <li>LOTR - The Return Of The King</li> -->
-          <li v-for="book in books">{{book.title}}: {{book.author}}</li>
+          <li v-for="book in books" :book=book></li>
         </ul>
     </div>
 </template>
 <script>
+    import BookItem from './BookItem.vue'
     export default {
       name: "BookList",
       data() {
@@ -22,7 +23,8 @@
               {title: 'Amusing Ourselves to Death', author: 'Neil Postman'},
           ]
         }
-      }
+      },
+      components: { BookItem }
     }
 </script>
 <style>
