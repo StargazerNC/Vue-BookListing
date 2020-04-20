@@ -5,12 +5,12 @@
           <!-- <li>LOTR - Fellowship Of The Ring</li>
           <li>LOTR - The Two Towers</li>
           <li>LOTR - The Return Of The King</li> -->
-          <li v-for="book in books" :book=book></li>
+          <book-item v-for="book in books" :book='book'></book-item>
         </ul>
     </div>
 </template>
 <script>
-    import BookItem from './BookItem.vue';
+    import BookItem from './BookItem';
 
     export default {
       name: "BookList",
