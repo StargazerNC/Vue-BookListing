@@ -26,8 +26,11 @@
           ]
         }
       },
-      components: { BookItem },
-      mewthods:{
+      components: {
+        BookItem,
+        BookForm
+      },
+      methods:{
         appendBook(bookTitle, bookAuthor){
           this.books.push({ title: bookTitle, author: bookAuthor })
         }
